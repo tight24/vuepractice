@@ -1,5 +1,8 @@
 [user]
-	email = Rsbull42@gmail.com
-	name = Taito
+	email = 'Rsbull42@gmail.com'
+	name = 'taito'
 [core]
 	editor = \"C:\\Users\\Taito\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --wait
+	editor = 'code
+[push]
+	default = simple

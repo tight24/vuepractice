@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>親コンポーネントから子コンポーネントへデータの伝番</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+  <div id="app">
+    <item-desc :item-name="myItem"></item-desc>
+  </div>
+
+  <script>
+    Vue.component('item-desc',{
+      props: {
+        itemName:{
+          type:String
+        }
+      },
+      template:'<p> {{itemName}}は便利です。 </p>'
+    })
+
+    new Vue({
+      el:'#app',
+      data: {
+        myItem: 'pen'
+      }
+    })
+  </script>
+</body>
+</html>
